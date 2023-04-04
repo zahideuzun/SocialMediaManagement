@@ -19,13 +19,14 @@ namespace SocialMediaManagement.DataAccess.DAL
 					join u in socialMediaContext.Users on usm.UserId equals u.UserId
 					where usm.UserId == userId
 					      && usm.SocialMediaId == socialMediaId
-					      && usm.Email == email
+					      && (usm.Email == email || usm.Username==email)
 					      && usm.Password == password
 					select new UserLoginVM()
 					{
 						Email = usm.Email,
 						Name = u.Name,
-						Surname = u.Surname
+						Surname = u.Surname,
+						Username = u.Username
 					}).SingleOrDefault();
 
 				return result;

@@ -13,7 +13,7 @@ namespace SocialMediaManagement.DataAccess.Model.Configuration
 		public LogTypeModelConfiguration()
 		{
 			HasKey(lt => lt.LogTypeId);
-			Property(lt => lt.LogTypeDescription).IsRequired()
+			Property(lt => lt.LogTypeDescription)
 				.HasMaxLength(100);
 
 			HasMany(lt => lt.Logs)

@@ -127,8 +127,8 @@ namespace SocialMediaManagement.DataAccess.Migrations
 				new Log { LogId = 1, LogTypeId = 1, UserId = 1, LogDescription = "User logged in.", LogTime = DateTime.Now },
 				new Log { LogId = 2, LogTypeId = 2, UserId = 2, LogDescription = "Invalid password entered.", LogTime = DateTime.Now },
 				new Log { LogId = 3, LogTypeId = 3, UserId = 1, LogDescription = "Database connection error.", LogTime = DateTime.Now },
-				new Log { LogId = 4, LogTypeId = 4, UserId = 3, LogDescription = "User login is success.", LogTime = DateTime.Now },
-				new Log { LogId = 5, LogTypeId = 5, UserId = 4, LogDescription = "User login is successful.", LogTime = DateTime.Now },
+				new Log { LogId = 4, LogTypeId = 4, UserId = 3, LogDescription = "User login is successful.", LogTime = DateTime.Now },
+				new Log { LogId = 5, LogTypeId = 5, UserId = 4, LogDescription = "User login is failed.", LogTime = DateTime.Now },
 
 			};
 			context.Logs.AddOrUpdate(c => c.LogId, logs.ToArray());

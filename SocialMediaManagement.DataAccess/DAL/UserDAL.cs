@@ -15,11 +15,10 @@ namespace SocialMediaManagement.DataAccess.DAL
 		{
 			using (SocialMediaContext socialMediaContext = new SocialMediaContext())
 			{
-				var userId = (from user in socialMediaContext.Users
-							  where user.Email == email && user.Password == password
-								  select user.UserId).SingleOrDefault();
-
-				return userId;
+				int? userId = socialMediaContext.Users
+					.SingleOrDefault(u => u.Email == email && u.Password == password)?.UserId;
+				
+				return userId ?? 0;
 			}
 		}
 	}

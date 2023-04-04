@@ -15,7 +15,7 @@ namespace SocialMediaManagement.DataAccess.Model.Configuration
 			HasKey(a => a.LogId);
 
 			Property(a => a.LogDescription)
-				.IsRequired().HasMaxLength(50);
+				.HasMaxLength(50);
 
 			Property(x => x.UserId).IsOptional();
 

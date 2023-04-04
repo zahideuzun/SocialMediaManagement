@@ -35,12 +35,12 @@ namespace SocialMediaManagement.UI
 				if (user != null)
 				{
 					MessageBox.Show($"Kullanıcı Adı: {user.Name} {user.Surname}");
-					LogAdd(LogType.SuccessLogin, "Instagram Giriş Başarılı");
+					LogAdd(LogType.SuccessLogin, "Instagram login successful!");
 				}
 				else
 				{
 					MessageBox.Show("Başarısız");
-					LogAdd(LogType.LoginFailed, "Instagram Başarısız Giriş");
+					LogAdd(LogType.LoginFailed, "Instagram login failed!");
 				}
 			}
 		}
@@ -64,7 +64,7 @@ namespace SocialMediaManagement.UI
 			logDal = new LogDAL();
 			logDal.Insert(new Log()
 			{
-				LogId = Convert.ToInt16(logType),
+				LogTypeId = Convert.ToInt16(logType),
 				UserId = _userId,
 				LogTime = DateTime.Now,
 				LogDescription = message
@@ -72,7 +72,7 @@ namespace SocialMediaManagement.UI
 		}
 		private bool Validation(string email, string password)
 		{
-			return ValidationTool.BosMu(email, password) && ValidationTool.BoslukVarMi(email, password) && ValidationTool.EmailKontrol(email);
+			return ValidationTool.BosMu(email, password) && ValidationTool.BoslukVarMi(email, password) /*&& ValidationTool.EmailKontrol(email)*/;
 		}
 		private void Login(SocialMediaType socialMediaType, string email, string password, string socialMediaName)
 		{
@@ -84,16 +84,16 @@ namespace SocialMediaManagement.UI
 
 				if (user != null)
 				{
-					MessageBox.Show($"Kullanıcı Adı: {user.Name} {user.Surname} \n {socialMediaName} Giriş Başarılı");
-					LogAdd(LogType.SuccessLogin, $"{socialMediaName} Giriş Başarılı");
+					MessageBox.Show($"Username: {user.Username} \n {socialMediaName} login successful!");
+					LogAdd(LogType.SuccessLogin, $"{socialMediaName} login successful!");
 				}
 				else
 				{
-					MessageBox.Show($"{socialMediaName} Giriş Başarısız");
-					LogAdd(LogType.Error, $"{socialMediaName}  Başarısız Giriş");
+					MessageBox.Show($"{socialMediaName} login failed!");
+					LogAdd(LogType.LoginFailed, $"{socialMediaName}  login failed!");
 				}
 			}
-			else MessageBox.Show("Bilgileri Eksiksiz Giriniz!!!");
+			else MessageBox.Show("Please enter the information completely!!!");
 		}
 	}
 }
