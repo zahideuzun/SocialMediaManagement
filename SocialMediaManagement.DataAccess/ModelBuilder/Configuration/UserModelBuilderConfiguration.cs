@@ -22,6 +22,10 @@ namespace SocialMediaManagement.DataAccess.Model.Configuration
 				.IsRequired()
 				.HasMaxLength(60);
 
+			Property(c => c.Username)
+				.IsRequired()
+				.HasMaxLength(60);
+
 			Property(c => c.Email)
 				.IsRequired()
 				.HasMaxLength(250);
