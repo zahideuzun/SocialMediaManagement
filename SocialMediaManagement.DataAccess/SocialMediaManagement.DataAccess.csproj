@@ -55,6 +55,8 @@
     <Compile Include="DAL\LogDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DAL\UserSocialMediaDAL.cs" />
+    <Compile Include="Entities\Enums\LogType.cs" />
+    <Compile Include="Entities\Enums\SocialMediaType.cs" />
     <Compile Include="Entities\Log.cs" />
     <Compile Include="Entities\LogType.cs" />
     <Compile Include="Entities\SocialMedia.cs" />
