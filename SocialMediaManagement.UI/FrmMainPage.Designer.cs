@@ -117,6 +117,7 @@
 			this.chbShowPasswordInstagram.TabIndex = 2;
 			this.chbShowPasswordInstagram.Text = "Şifreyi Göster";
 			this.chbShowPasswordInstagram.UseVisualStyleBackColor = true;
+			this.chbShowPasswordInstagram.CheckedChanged += new System.EventHandler(this.chbShowPasswordInstagram_CheckedChanged);
 			// 
 			// tbInstagramPassword
 			// 
@@ -201,6 +202,7 @@
 			this.cbShowPasswordFacebook.TabIndex = 2;
 			this.cbShowPasswordFacebook.Text = "Şifreyi Göster";
 			this.cbShowPasswordFacebook.UseVisualStyleBackColor = true;
+			this.cbShowPasswordFacebook.CheckedChanged += new System.EventHandler(this.cbShowPasswordFacebook_CheckedChanged);
 			// 
 			// gbTwitter
 			// 
@@ -264,6 +266,7 @@
 			this.cbShowPasswordTwitter.TabIndex = 2;
 			this.cbShowPasswordTwitter.Text = "Şifreyi Göster";
 			this.cbShowPasswordTwitter.UseVisualStyleBackColor = true;
+			this.cbShowPasswordTwitter.CheckedChanged += new System.EventHandler(this.cbShowPasswordTwitter_CheckedChanged);
 			// 
 			// tbTwitterPassword
 			// 
@@ -324,6 +327,7 @@
 			this.cbShowPassword.TabIndex = 2;
 			this.cbShowPassword.Text = "Şifreyi Göster";
 			this.cbShowPassword.UseVisualStyleBackColor = true;
+			this.cbShowPassword.CheckedChanged += new System.EventHandler(this.cbShowPassword_CheckedChanged);
 			// 
 			// label7
 			// 

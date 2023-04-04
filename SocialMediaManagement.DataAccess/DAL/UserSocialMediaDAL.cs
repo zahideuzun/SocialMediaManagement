@@ -27,6 +27,7 @@ namespace SocialMediaManagement.DataAccess.DAL
 						Name = u.Name,
 						Surname = u.Surname,
 						Username = u.Username
+
 					}).SingleOrDefault();
 
 				return result;
