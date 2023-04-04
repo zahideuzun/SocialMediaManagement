@@ -15,6 +15,7 @@ namespace SocialMediaManagement.DataAccess.Model.Configuration
 			HasKey(x => x.UserSocialMediaId);
 			Property(x => x.Password).HasMaxLength(20);
 			Property(x => x.Email).HasMaxLength(250);
+			Property(x => x.Username).HasMaxLength(60);
 		}
 		
 	}

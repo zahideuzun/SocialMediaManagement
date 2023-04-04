@@ -102,9 +102,9 @@ namespace SocialMediaManagement.DataAccess.Migrations
 
 			var userSocialMedias = new List<UserSocialMedia>
 			{
-				new UserSocialMedia { UserSocialMediaId = 1, UserId = 1, SocialMediaId = 1, Email = "zahide@gmail.com", Password = "facebookpassword" },
-				new UserSocialMedia { UserSocialMediaId = 2, UserId = 1, SocialMediaId = 2, Email = "zahide@gmail.com", Password = "twitterpassword" },
-				new UserSocialMedia { UserSocialMediaId = 3, UserId = 2, SocialMediaId = 3, Email = "iskender@gmail.com", Password = "instagrampassword" }
+				new UserSocialMedia { UserSocialMediaId = 1, UserId = 2, SocialMediaId = 1, Email = "zahide@gmail.com", Username = "zahide",Password = "facebookpassword" },
+				new UserSocialMedia { UserSocialMediaId = 2, UserId = 2, SocialMediaId = 2, Email = "zahide@gmail.com", Username = "zahide", Password = "twitterpassword" },
+				new UserSocialMedia { UserSocialMediaId = 3, UserId = 3, SocialMediaId = 3, Email = "iskender@gmail.com", Username = "iskender",Password = "instagrampassword" }
 			};
 
 

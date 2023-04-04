@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\SocialMediaContext.cs" />
+    <Compile Include="DAL\LogDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="DAL\UserSocialMediaDAL.cs" />
     <Compile Include="Entities\Log.cs" />
